@@ -1,0 +1,42 @@
+\documentclass[12pt, openany]{book}
+\usepackage[letterpaper, margin=1in]{geometry}
+\usepackage{setspace}
+\usepackage[utf8]{inputenc}
+
+% By default, LaTeX doesn't indent the first line in a paragraph
+\usepackage{indentfirst}
+
+% Load images
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
+% APA citations and bibliography
+\usepackage{apacite}
+
+\doublespacing
+
+% Reset page numbering as book format places them at the top.
+\pagestyle{plain}
+
+% Use Helvetica since it's the closest font to Arial
+\usepackage{helvet}
+\renewcommand\familydefault{\sfdefault}
+
+\begin{document}
+
+\frontmatter
+\include{frontmatter/title-page}
+\include{frontmatter/acknowledgement}
+\tableofcontents
+
+\mainmatter
+\include{chapters/chapter01}
+\include{chapters/chapter02}
+\include{chapters/chapter03}
+\include{chapters/chapter04}
+
+\backmatter
+\bibliographystyle{apacite}
+\bibliography{references.bib}
+
+\end{document}
