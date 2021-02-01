@@ -16,6 +16,29 @@
 \setlength\parindent{1cm}
 \doublespacing
 
+\makeatletter
+\renewcommand*\@makechapterhead[1]{%
+   %\vspace*{50\p@}%
+   {\parindent \z@ \raggedright \normalfont
+     \ifnum \c@secnumdepth >\m@ne
+         \huge\bfseries \@chapapp\space \thechapter
+         \par\nobreak
+         \vskip 20\p@
+     \fi
+     \interlinepenalty\@M
+     \Huge \bfseries #1\par\nobreak
+     \vskip 40\p@
+   }}
+\renewcommand*\@makeschapterhead[1]{%
+   %\vspace*{50\p@}%
+   {\parindent \z@ \raggedright
+     \normalfont
+     \interlinepenalty\@M
+     \Huge \bfseries  #1\par\nobreak
+     \vskip 40\p@
+   }}
+\makeatother
+
 % Reset page numbering as book format places them at the top.
 \pagestyle{plain}
 
