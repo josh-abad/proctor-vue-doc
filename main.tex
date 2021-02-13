@@ -23,32 +23,60 @@
 \makeatletter
 \renewcommand*\@makechapterhead[1]{%
    %\vspace*{50\p@}%
-   {\parindent \z@ \raggedright \normalfont
+   {\parindent \z@ \raggedright \normalfont \centering
      \ifnum \c@secnumdepth >\m@ne
-         \huge\bfseries \@chapapp\space \thechapter
+         \large\bfseries \@chapapp\space \thechapter
          \par\nobreak
-         \vskip 20\p@
+         \vskip 10\p@
      \fi
      \interlinepenalty\@M
-     \Huge \bfseries #1\par\nobreak
-     \vskip 40\p@
+     \large \bfseries #1\par\nobreak
+     \vskip 20\p@
    }}
 \renewcommand*\@makeschapterhead[1]{%
    %\vspace*{50\p@}%
-   {\parindent \z@ \raggedright
+   {\parindent \z@ \raggedright \centering
      \normalfont
      \interlinepenalty\@M
-     \Huge \bfseries  #1\par\nobreak
-     \vskip 40\p@
+     \large \bfseries  #1\par\nobreak
+     \vskip 20\p@
    }}
 \makeatother
+
+\usepackage{titlesec}
+
+\titleformat{\section}
+  {\normalfont\large\bfseries}{\thesection}{1em}{}
+% \titleformat{\chapter}[display]
+%    {\normalfont\huge\bfseries\centering}{\centering\chaptertitlename\ \thechapter}{20pt}{\Huge}
+% \titlespacing*{\chapter} 
+%    {0pt}{50pt}{40pt}
 
 % Reset page numbering as book format places them at the top.
 \pagestyle{plain}
 
+% For flowchart graphics
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
+\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
+\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=orange!30]
+\tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+% Typesetting code
+\usepackage{FiraMono}
+\usepackage[T1]{fontenc}
+
+\usepackage{listings}
+\lstset{basicstyle=\footnotesize\ttfamily,breaklines=true}
+
 % Use Helvetica since it's the closest font to Arial
 \usepackage{helvet}
 \renewcommand\familydefault{\sfdefault}
+
+\newcommand{\projectName}{Proctor Vue}
 
 \begin{document}
 

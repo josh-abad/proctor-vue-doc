@@ -1,1 +1,51 @@
 \chapter{Methodology Results and Discussion}
+
+Materials and Methods is the chronological listing of steps and procedure/s used by the proponent/s.
+Methods used for gathering of data, laboratory and field experiment, theoretical and/or conceptual frameworks, as well as techniques employed in the analyses of data must be specifically listed.
+
+\section{Software Design}
+
+\section{System Architecture}
+
+\section{Conceptual Design}
+
+\section{Cost Benefit Analysis}
+
+\section{Requirement Analysis}
+
+\section{Block Diagrams}
+
+\begin{center}
+    \begin{tikzpicture}[node distance=2cm]
+        \node (start) [startstop] {Start};
+        \node (loadModels) [process, below of=start] {Load Machine Learning models};
+        \node (loadDescriptor) [process, below of=loadModels] {Load User's Face Descriptor};
+        \node (startVideo) [process, below of=loadDescriptor] {Start webcam};
+        \node (startTest) [process, below of=startVideo] {Start test};
+        % \node (in1) [io, below of=loadModels] {Input};
+
+        % \node (end) [startstop, below of=] {End};
+
+        \draw [arrow] (start) -- (loadModels);
+        \draw [arrow] (loadModels) -- (loadDescriptor);
+        \draw [arrow] (loadDescriptor) -- (startVideo);
+        \draw [arrow] (startVideo) -- (startTest);
+    \end{tikzpicture}
+\end{center}
+
+\section{Development and Testing}
+
+\begin{lstlisting}[numbers=left, language=C]
+#include <stdio.h>
+
+int main(void) {
+    printf("Hello, world!\n");
+    return 0;
+}
+\end{lstlisting}
+
+\section{Input and Output Reports and Analysis}
+
+\section{Description of the Prototype}
+
+\section{Implementation Plan}
