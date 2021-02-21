@@ -1,0 +1,76 @@
+\documentclass[12pt, openany]{book} % openany to avoid blank pages between chapters
+\usepackage[utf8]{inputenc}
+
+% Set margin and paper size
+\usepackage[letterpaper, margin=1in]{geometry}
+
+% Indent first line in paragraph
+\usepackage{indentfirst}
+
+% Set indent size
+\setlength\parindent{1cm}
+
+% Enable double spacing
+\usepackage{setspace}
+\doublespacing
+
+% Set font
+\usepackage{helvet}
+\renewcommand\familydefault{\sfdefault}
+
+% Remove color from hyperlinks
+\usepackage[hidelinks]{hyperref}
+
+% APA citations and bibliography
+\usepackage{apacite}
+
+% Load images
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
+% Set margins for chapter headings
+\makeatletter
+\renewcommand*\@makechapterhead[1]{%
+    %\vspace*{50\p@}%
+    {\parindent \z@ \raggedright \normalfont \centering
+            \ifnum \c@secnumdepth >\m@ne
+                \large\bfseries \@chapapp\space \thechapter
+                \par\nobreak
+                \vskip 10\p@
+            \fi
+            \interlinepenalty\@M
+            \large \bfseries #1\par\nobreak
+            \vskip 20\p@
+        }}
+\renewcommand*\@makeschapterhead[1]{%
+    %\vspace*{50\p@}%
+    {\parindent \z@ \raggedright \centering
+            \normalfont
+            \interlinepenalty\@M
+            \large \bfseries  #1\par\nobreak
+            \vskip 20\p@
+        }}
+\makeatother
+
+% Set size of chapter headings
+\usepackage{titlesec}
+\titleformat{\section}
+{\normalfont\large\bfseries}{\thesection}{1em}{}
+
+% Suppress box warnings
+\raggedbottom
+
+% Reset page numbering as book format places them at the top
+\pagestyle{plain}
+
+% Set the heading for Table of Contents section
+\renewcommand{\contentsname}{Table of Contents}
+
+% Code appearance
+\usepackage{FiraMono}
+\usepackage[T1]{fontenc}
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily,breaklines=true}
+
+% Remove blank page before first chapter
+\let\cleardoublepage=\clearpage
