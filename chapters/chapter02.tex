@@ -74,3 +74,31 @@ The variety of Test design versions, randomization of items in the question pool
 On the other hand, Monitoring and evaluating of examinations was recommended by 35\% of the students (18/52), Such as Online proctoring using screen viewers or screen capture (ex. join me) and using web cameras could ensure proper monitoring of students in their assessment.
 
 The above study is similar to the present study in relation to the enumeration of the cheating tendencies of the students and its prevention through automated online proctoring.
+
+\section{Technical Background}
+
+% Include in-depth discussion on the relevant technical aspect of the project.
+% It includes software performance, hardware differentiation, implementation, constraints and other technical aspect of the area of study.
+
+The proposed system is a web-based application to enable broad availability for its end-users.
+
+% Software performance
+The process of detecting and recognizing users' faces is handled solely in the browser to provide real-time detection during exams.
+Running real-time facial detection can be resource intensive.
+To achieve a smoother experience for end-users, the proposed system uses a neural network model optimized for resouce-limited devices.
+
+% Implementation
+The application will be implemented as a Single-Page Application (SPA).
+SPAs are a more dynamic and modern type of web application than standard websites.
+User interaction is much more seamless as all data on the page dynamically changes without requesting a new page.
+
+The frontend of Proctor Vue is written using Vue.js, a popular JavaScript framework for creating Single-Page Applications.
+
+The server-side logic is written using ExpressJS, a Node.js web application framework.
+The Express application handles requests from the client through the system's Application Programming Interface (API) and retrieves data directly from the database.
+
+The system is deployed through the Amazon Web Services (AWS) ecosystem.
+The ExpressJS backend is running on provisioned virtual instances of Amazon Elastic Compute Cloud (EC2).
+EC2 instances are essentially virtual computers that live in the cloud, allowing them to be scaled easily as the application's load increases/decreases.
+The Vue.js SPA is stored using Amazon Simple Storage Service (S3) and is served using Amazon CloudFront, a content delivery network (CDN).
+Serving static content, such as a Single-Page Application, through a CDN provides a faster and more cost-efficient way to deliver the application to users.
