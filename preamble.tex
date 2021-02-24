@@ -74,3 +74,20 @@
 
 % Remove blank page before first chapter
 \let\cleardoublepage=\clearpage
+
+% Peso sign
+\makeatletter
+\DeclareRobustCommand{\PHP}{%
+    \begingroup
+    \leavevmode\,\vphantom{P}%
+    \dimen\z@=.5\fontcharht\font`P\relax
+    \dimen\tw@=0.33333\dimen\z@
+    \ooalign{%
+        \raisebox{\dimexpr\dimen\z@+2\dimen\tw@-0.4pt}{\rule{\fontcharwd\font`P}{0.4pt}}\cr
+        \raisebox{\dimexpr\dimen\z@+\dimen\tw@-0.2pt}{\rule{\fontcharwd\font`P}{0.4pt}}\cr
+        P\cr
+    }%
+    \,\endgroup
+}
+\makeatother
+
