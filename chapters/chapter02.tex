@@ -1,5 +1,8 @@
 \chapter{Related Literature and Studies}
 
+This chapter presents the related literature and studies after the thorough and in-depth search done by the proponents.
+This will also present the synthesis of the art, theoretical and conceptual framework to fully understand the research to be done and the definition of terms for better understanding of the study.
+
 \section{Foreign Literature}
 
 Cheating and competition are not new issues for higher education \cite{nuss1984academic}.
@@ -9,15 +12,14 @@ As a result, the picture of academic life as portrayed by the Carnegie Council a
 The most commonly reported challenge in online assessment is how to maintain academic integrity \cite{hollister2009proctored}, especially with unproctored assessments \cite{arnold2016cheating}.
 \citeA{KERESZTURY20131516} evaluated cheating methods in classic exams which they classified into three categories: information exchange among students, using forbidden materials, and circumventing the assessment process.
 In addition, \citeA{moten2013examining} explained that students in these learning environment work independently with relative autonomy and anonymity, and instructors may be uncertain who is taking exams or how best to validate student learning.
-
 \citeA{gao2012online} summed the commonly used methods to prevent students from taking online exams from e-cheating as follows.
 
 \begin{enumerate}
-    \item Setting up time limitation.
-    \item Setting up quizzes.
-    \item Exams consist of randomly selected questions from a vast question pool so that each student will have a different exam/test.
-    \item Comparing the IP addresses to see if two students are in the vicinity of each other.
-    \item Using biometrics to reduce the possibility of E-cheating and to authenticate remote students.
+   \item Setting up time limitation.
+   \item Setting up quizzes.
+   \item Exams consist of randomly selected questions from a vast question pool so that each student will have a different exam/test.
+   \item Comparing the IP addresses to see if two students are in the vicinity of each other.
+   \item Using biometrics to reduce the possibility of E-cheating and to authenticate remote students.
 \end{enumerate}
 
 Many institutions have adopted Automated Online Proctoring Technology to promote academic integrity in their online learning environment.
@@ -43,21 +45,20 @@ But the main focus of the present study is only on the behaviors of students in 
 In the research addressing student validation based on face recognition for online learning \cite{labayen2014smowl}, it is stated that without certainty of the authenticity of the online learner’s identity, the aspiration towards fully online education is stymied and the evaluation of the knowledge and skills obtained by the online learner is unreliable.
 
 This research is similar the present study as it will portray the relevance of validity of students’ identity in taking an online examination.
-
 \citeA{frankl2011secure} gave "Secure Exam Environment" (SEE) implemented at the Alpen-Adria-Universität Klagenfurt (AAUK) to be held on student portable pcs without access to local files and resource, for example, the Internet.
 The AAUK is using the e-learning-platform “Moodle” (see http://moodle.com) as a teaching and testing tool.
 Therefore, the usage of the SEE is embedded in Moodle.
 
 This study has the same objective as the present study.
 However, the present study also includes face recognition to assure the validity of the test takers.
-Also, the present study will not be embedded to the e-learning platform used by AMA Computer College- Parañaque, it will be an independent web application that is only intended for online examination of students.
+Also, the present study will not be embedded to the e-learning platform used by AMA Computer College Parañaque, it will be an independent web application that is only intended for online examination of students.
 
 \section{Local Studies}
 
 An open ended questionnaire was distributed to 52 students of the University of the Philippines Open University enrolled in a Computer Ethics course at the graduate level where the course, including the final exam, is fully online \cite{ravasco2012technology}.
-
-The first questioned asked was where does student cheat more frequent, and 21 out of 52 which is 40.38\% of the class are convinced that there is more cheating or more possibility of it happening in an online classroom.
-One reason a student has stated was: “I believe cheating is more frequent in an online distance course because information is readily available and accessible. Once a student goes online, hundreds and hundreds of answers for assignments, quizzes, or tests can be acquired.”
+The first question asked was where does student cheat more frequent, and 21 out of 52 which is 40.38\% of the class are convinced that there is more cheating or more possibility of it happening in an online classroom.
+One reason a student has stated was: “I believe cheating is more frequent in an online distance course because information is readily available and accessible.
+Once a student goes online, hundreds and hundreds of answers for assignments, quizzes, or tests can be acquired.”
 
 The students then asked to offer ways online cheating could be done or is already being done based on their readings, their experiences, and from their own observation.
 73\% (38/52) mentioned identity impersonation, substitution, or proxy attendance as the most common and perhaps the easiest to get away with.
@@ -65,9 +66,9 @@ Here an online student gets another to do the academic work requirement for him 
 69\% (36/52) named the search engine and plagiarism duo as a very common way of cheating.
 Students would “google” terms, ideas, concepts and copy-paste their desired portions on their work.
 69\% (36/52) referred to unauthorized intellectual networking as another method of cheating.
+
 Students would collaborate dishonestly and even share files in the process.
 This involves discussing answers with each other using forums or even personal chat rooms.
-
 The research also let the students provide recommendations in regards to preventing online cheating.
 62\% of the students(32/52) cited an improvement to the Design of Assessment of examination environment.
 The variety of Test design versions, randomization of items in the question pool, password protection and limit of access to online test, assessment deployment in a secure web browser (respondus lockdown) with a “one question per screen” technique.
@@ -77,17 +78,12 @@ The above study is similar to the present study in relation to the enumeration o
 
 \section{Technical Background}
 
-% Include in-depth discussion on the relevant technical aspect of the project.
-% It includes software performance, hardware differentiation, implementation, constraints and other technical aspect of the area of study.
-
 The proposed system is a web-based application to enable broad availability for its end-users.
 
-% Software performance
 The process of detecting and recognizing users' faces is handled solely in the browser to provide real-time detection during exams.
 Running real-time facial detection can be resource intensive.
 To achieve a smoother experience for end-users, the proposed system uses a neural network model optimized for resouce-limited devices.
 
-% Implementation
 The application will be implemented as a Single-Page Application (SPA).
 SPAs are a more dynamic and modern type of web application than standard websites.
 User interaction is much more seamless as all data on the page dynamically changes without requesting a new page.
@@ -102,3 +98,30 @@ The ExpressJS backend is running on provisioned virtual instances of Amazon Elas
 EC2 instances are essentially virtual computers that live in the cloud, allowing them to be scaled easily as the application's load increases/decreases.
 The Vue.js SPA is stored using Amazon Simple Storage Service (S3) and is served using Amazon CloudFront, a content delivery network (CDN).
 Serving static content, such as a Single-Page Application, through a CDN provides a faster and more cost-efficient way to deliver the application to users.
+
+\section{Synthesis}
+
+The cited related literature and studies, both foreign and local have some relationship and relevance to the proposed study particularly the concerns on the academic malpractices during online examination and the need to aid it by means of online proctoring application.
+
+The different studies helped the proponents to gain knowledge and supporting ideas for the design and development of the proposed study.
+Thus, the potential of the proposed Web-based Automated online proctor to eliminate cheating activities and creating a fair online assessment has been identified.
+
+\section{Conceptual Framework}
+
+The conceptual framework is the scheme formulated from the related studies that will guide the proponents in the study.
+
+\pagebreak
+
+\begin{figure}[h!]
+   \begin{center}
+      \includegraphics[scale=1.0]{conceptual-framework}
+      \caption{Conceptual Paradigm of the Study}
+   \end{center}
+\end{figure}
+
+\textbf{The Input} consists of the cheating activities encountered in the online examination of AMA Computer College Parañaque, and the additional information from the data gathered in the questionnaires.
+
+\textbf{The Process} shows the interpretation and analysis of the gathered data from the questionnaires, analyzing the requirements needed to create the program, designing the software, prototyping, coding both front and backend, and testing.
+
+\textbf{The Output} of the study, Proctor Vue: A web-based automated online proctor.
+
