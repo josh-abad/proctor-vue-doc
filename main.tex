@@ -4,7 +4,7 @@
 
 \frontmatter
 \include{frontmatter/title-page}
-% \include{frontmatter/approval-sheet}
+\include{frontmatter/approval-sheet}
 \include{frontmatter/acknowledgement}
 \tableofcontents
 \listoftables
@@ -17,8 +17,12 @@
 \include{chapters/chapter04}
 \include{chapters/chapter05}
 
-\backmatter
+\titleformat*{\section}{\bfseries\large\centering}
 \bibliographystyle{apacite}
 \bibliography{references.bib}
+
+\begin{appendices}
+  \input{chapters/appendix}
+\end{appendices}
 
 \end{document}
