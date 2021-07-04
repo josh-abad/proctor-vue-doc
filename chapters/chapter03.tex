@@ -287,7 +287,7 @@ Once detected, a warning will be automatically given.
 Automatically shutting down the exam when the student reached 5 consecutive warnings.
 The answered questions prior to the shutdown will determine the score of the students.
 
-\section{System Cost}
+\section{Cost Benefit Analysis}
 
 \begin{table}[h!]
    \begin{center}
@@ -295,17 +295,19 @@ The answered questions prior to the shutdown will determine the score of the stu
          \hline
          \textbf{Item}                        & \textbf{Specification}       & \textbf{Cost} \\
          \hline
-         Datebase Instance                    & MongoDB Atlas                & \PHP2,805.81  \\
+         DNS (per year)                       & Route 53/Host Domain         & \PHP1,532.23  \\
          \hline
-         Storage for User-Uploaded Images     & Amazon S3/CloudFront         & \PHP32.15     \\
+         Datebase Instance                    & MongoDB Atlas                & \PHP51,624.42 \\
          \hline
-         Web Application Hosting              & Amazon S3/CloudFront         & \PHP454.82    \\
+         Storage for User-Uploaded Images     & Amazon S3 5GB/CloudFront     & \PHP76.61     \\
          \hline
-         Load Balancer                        & Amazon Elastic Load Balancer & \PHP896.30    \\
+         Web Application Hosting              & Amazon S3 5GB/CloudFront     & \PHP76.61     \\
          \hline
-         Application Backend and API          & Amazon EC2                   & \PHP4,246.70  \\
+         Load Balancer                        & Amazon Elastic Load Balancer & \PHP15,670.02 \\
          \hline
-         \multicolumn{2}{|l|}{\textbf{Total}} & \textbf{\PHP8,435.78}                        \\
+         Application Backend and API          & Amazon EC2                   & \PHP48,064.93 \\
+         \hline
+         \multicolumn{2}{|l|}{\textbf{Total}} & \textbf{\PHP117,044.82}                      \\
          \hline
       \end{tabular}
    \end{center}
@@ -313,6 +315,35 @@ The answered questions prior to the shutdown will determine the score of the stu
 \end{table}
 
 Source: www.mongodb.com, calculator.aws
+
+\begin{table}[h!]
+   \begin{center}
+      \begin{tabular}{|l|r|}
+         \hline
+         Increases Students' Morale                               & \PHP294,659.94          \\
+         \hline
+         Increases Interest to the School                         & \PHP61,387.49           \\
+         \hline
+         Alternative testing center for face-to-face examinations & \PHP29,465.99           \\
+         \hline
+         \textbf{Total}                                           & \textbf{\PHP385,513.42} \\
+         \hline
+      \end{tabular}
+   \end{center}
+   \caption{Benefit}
+\end{table}
+
+\textbf{Return on Investment.}
+The Return on Investment of the proposed software is calculated by dividing the positive cashflows which is the difference of benefit and cost into the negative cashflow: cost.
+
+The total is then converted to percentage which yields to 229\% Return on investment every year.
+
+\begin{equation*}
+   \begin{split}
+      \text{Cost Benefit Ratio} & = 3.29 \\
+      \text{ROI (annual)} & = 229\%
+   \end{split}
+\end{equation*}
 
 \section{Description of the Prototype}
 
